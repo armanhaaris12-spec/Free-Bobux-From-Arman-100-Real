@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Bobux By Arman100%NoScam</title>
+  <link rel="icon" href="assets/Icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #22c55e;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #16a34a;
+      transform: scale(1.05);
+    }
+
+    .loader {
+      border: 5px solid #1e293b;
+      border-top: 5px solid #22c55e;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin: 20px auto;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      background: black;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading" class="card">
+  <h1>🎁 Preparing your reward...</h1>
+  <div class="loader"></div>
+  <p>Please wait a moment</p>
+</div>
+
+<!-- Main Screen -->
+<div id="main" class="card hidden">
+  <h1>🎉 Congratulations!</h1>
+  <p>You have Win 1B Bobux.</p>
+  <button class="btn" onclick="startRickroll()">Claim Reward</button>
+</div>
+
+<script>
+  // Fake loading
+  setTimeout(() => {
+    document.getElementById("loading").classList.add("hidden");
+    document.getElementById("main").classList.remove("hidden");
+  }, 2500);
+
+  // Start Rickroll
+  function startRickroll() {
+    document.body.innerHTML = `
+      <video autoplay muted controls>
+        <source src="rickroll.mp4" type="video/mp4">
+      </video>
+    `;
+  }
+</script>
+
+</body>
+</html>
